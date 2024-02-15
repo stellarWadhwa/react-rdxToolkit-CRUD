@@ -1,0 +1,16 @@
+body{  background-color: #FFF7F1;}
+*{font-family: 'Montserrat';}
+.card{  display: flex;  justify-content: center;  padding: 0rem 5rem;  display: flex;  flex-wrap: wrap;}
+.card div{  background-color: #E78895;  padding: 1rem 1rem;  margin: 1rem 2rem; border-radius: 20px;}
+.addUserBtn{border: 1px solid #E78895;  background-color: #FFF7F1; color: #E78895;  border-radius: 20px;  padding: 1rem 3rem; cursor: pointer;transition: .3s ease;font-weight: 600;font-size: 20px;margin-bottom: 1.5rem;}
+.addUserBtn:hover{background-color: #E78895;color: #FFF7F1; transition: .3s ease;}
+.form{background: #E78895;border-radius: 20px;padding:3rem 4rem;color:#FFF7F1;}
+.form span{font-size: 28px; font-weight: 600;}
+form{display: flex; flex-direction: column;padding-bottom: 4rem; width: 400px; margin: auto; padding-bottom: 0;margin-top: 1.5rem; justify-content: center;  display: flex;   align-items: center;}
+form input{  background: transparent;  border: 1px solid #FFF7F1;  border-radius: 5px;  padding: 5px;  color:#FFF7F1;}
+.mainApp{min-height: 80vh;  display: flex;  flex-direction: column;  align-items: center;  justify-content: center;}
+.submitBtnForm, .cardBtn{    margin-top: 1.5rem;    background: #FFF7F1;    color: #E78895;    padding: 1rem 2rem;    border:1px solid #E78895;    border-radius: 20px;    width: fit-content;    cursor: pointer;     transition: .3s ease;    font-weight: 600;  }
+.submitBtnForm:hover, .cardBtn:hover{    color:#FFF7F1;    background-color: #E78895;    border: 1px solid #FFF7F1;    transition: .3s ease; }
+.inputContainer{margin: .5rem 0;}
+.carddiv{    display: flex;  flex-direction: column; color:#FFF7F1;}
+.cardBtn{margin: 0 1rem;}
