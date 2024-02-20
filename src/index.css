@@ -11,6 +11,11 @@ form input{  background: transparent;  border: 1px solid #FFF7F1;  border-radius
 .mainApp{min-height: 80vh;  display: flex;  flex-direction: column;  align-items: center;  justify-content: center;}
 .submitBtnForm, .cardBtn{    margin-top: 1.5rem;    background: #FFF7F1;    color: #E78895;    padding: 1rem 2rem;    border:1px solid #E78895;    border-radius: 20px;    width: fit-content;    cursor: pointer;     transition: .3s ease;    font-weight: 600;  }
 .submitBtnForm:hover, .cardBtn:hover{    color:#FFF7F1;    background-color: #E78895;    border: 1px solid #FFF7F1;    transition: .3s ease; }
+.submitBtnForm:disabled{background-color: grey; color: black;}
+.submitBtnForm:disabled:hover{background-color: grey; color: black;}
 .inputContainer{margin: .5rem 0;}
+.inputContainer label{margin-right: 0.35rem;}
 .carddiv{    display: flex;  flex-direction: column; color:#FFF7F1;}
 .cardBtn{margin: 0 1rem;}
+.appNav{position: absolute;top: 0 ;right: 5rem;}
+.appNav button{margin-left:1rem}

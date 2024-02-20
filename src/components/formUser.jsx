@@ -26,10 +26,10 @@ const FormUser = ({onFormSubmit}) => {
             <form onSubmit={handleSubmit}>
                 <div className='inputContainer'>
                 <label>Name: </label>
-                <input type="text" ref={userNameRef} /></div>
+                <input type="text" ref={userNameRef} required /></div>
                 
                 <div className='inputContainer'><label>Age: </label>
-                <input type="number" ref={userAgeRef} /></div>
+                <input type="number" ref={userAgeRef} maxlength="4"/></div>
                 <button type="submit" className='submitBtnForm'>Submit</button>
             </form>
         </div>

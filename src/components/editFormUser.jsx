@@ -7,8 +7,6 @@ const EditFormUser = ({userData, onFormSubmit}) => {
     const ageRef = useRef(userData.age || '');   
 
 const dispatch=useDispatch();
-console.log(userData)
-
 const UpdateForm=(e)=>{
     e.preventDefault();
     const userId=userData.id;

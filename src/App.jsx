@@ -1,22 +1,33 @@
-
 import './App.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { addUser, deleteUser, selectUsers, updateUser } from './features/usersSlice';
 import { useEffect,useState } from 'react';
 import FormUser from './components/formUser';
 import EditFormUser from './components/editFormUser';
+import {logout, selectUserLogin} from "./features/userloginSlice"
+import { useNavigate } from "react-router-dom"; 
 
 function App() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [showedEditForm,setShowEditForm]= useState(false);
   const [editUserData,setEditUserData]=useState([]);
   const [showAddForm, setShowAddForm]= useState(false);
+  const userLogin=useSelector(selectUserLogin);
+  
+  
   // dispatch(addUser({ name: 'koko', age: 12 }));
 useEffect(()=>{
   setShowEditForm(false);
  },[dispatch])
 
- function handleDelete(id){
+ useEffect(()=>{
+  if(userLogin.user==null){
+    navigate("/login");
+  }
+  },[])
+
+function handleDelete(id){
 console.log(id);
 dispatch(deleteUser(id)); 
 }
@@ -27,7 +38,11 @@ function handleAddUserButton(){
 function handleUpdate(user){
   setEditUserData(user)
   setShowEditForm(true);
-  console.log(user)
+}
+function handleLogout(){
+  dispatch(logout());
+  navigate("/login");
+  
 }
 
 function editSucces(){
@@ -39,17 +54,23 @@ function addSucces(){
 
 const users=useSelector(selectUsers);
 
-  return (
+return (
     <>
     <div className='mainApp'>
-    <button className='addUserBtn' onClick={handleAddUserButton}>Add Users</button>
+      {userLogin.user!=null &&
+    <div className='appNav'>
+      <span>Welcome! {userLogin.user.name}</span>
+    <button className='submitBtnForm' onClick={handleLogout}>logout</button>
+    </div>}
+
+<button className='addUserBtn' onClick={handleAddUserButton}>Add Users</button>
         {showAddForm && <FormUser onFormSubmit={addSucces}/>}
               {showedEditForm && <EditFormUser userData={editUserData} onFormSubmit={editSucces}/> }
 
     <div className='cardP'>
       <div className='card'>
         
-      {users.length!=0? users.map((user) => (
+{users.length!=0? users.map((user) => (
         <>
 
         
