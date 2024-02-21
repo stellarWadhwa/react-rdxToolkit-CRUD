@@ -14,7 +14,7 @@ export const userloginSlice = createSlice({
               state.error=false; 
         },
         loginSuccess: (state, action) => {
-         
+         console.log(action.payload.res.data)
               state.user=action.payload.res.data;
               state.isFetching = false;
               state.error=false; 

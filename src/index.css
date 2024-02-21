@@ -1,6 +1,11 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
 body{  background-color: #FFF7F1;}
 *{font-family: 'Montserrat';}
-.card{  display: flex;  justify-content: center;  padding: 0rem 5rem;  display: flex;  flex-wrap: wrap;}
+.card{  display: flex;  justify-content: center;  padding: 0rem 5rem;  display: flex;  flex-wrap: wrap; background-color: #FFF7F1; border: none;}
 .card div{  background-color: #E78895;  padding: 1rem 1rem;  margin: 1rem 2rem; border-radius: 20px;}
 .addUserBtn{border: 1px solid #E78895;  background-color: #FFF7F1; color: #E78895;  border-radius: 20px;  padding: 1rem 3rem; cursor: pointer;transition: .3s ease;font-weight: 600;font-size: 20px;margin-bottom: 1.5rem;}
 .addUserBtn:hover{background-color: #E78895;color: #FFF7F1; transition: .3s ease;}
@@ -19,3 +24,6 @@ form input{  background: transparent;  border: 1px solid #FFF7F1;  border-radius
 .cardBtn{margin: 0 1rem;}
 .appNav{position: absolute;top: 0 ;right: 5rem;}
 .appNav button{margin-left:1rem}
+.userNameDashboard{word-break: break-all;}
+/* .activeClicked .active {font-weight: 900;} */
+.profileComponent{display: flex; flex-direction: column; align-items: center;justify-content: center;}

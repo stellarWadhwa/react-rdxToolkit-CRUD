@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import {loginStart, loginSuccess, logout,loginFailure, selectUserLogin} from "../features/userloginSlice"
 import { useNavigate } from "react-router-dom"; 
+import toast, { Toaster } from 'react-hot-toast';
+
+
 
 
 const Login = () => {
@@ -14,16 +17,31 @@ const Login = () => {
   const navigate = useNavigate();
 
   const [loginErr,setLoginErr]=useState('');
+  
 
     
 useEffect(()=>{ 
 if(userLogin.isFetching==true) setDisabledbtn(true);
 else setDisabledbtn(false);
-},[userLogin])
+if(loginErr!=false){
+  toast(loginErr,{
+    icon:"❌"
+  });
+}
+if(userLogin.user!=null){
+  toast("Logged In",{
+    icon:"✅"
+  });
+}
+
+},[userLogin,loginErr])
 
 useEffect(()=>{
     if(userLogin.user!=null){
-      navigate("/");
+      setTimeout(()=>{
+        navigate("/");
+
+      },2000)
     }
     },[userLogin])
 
@@ -61,9 +79,11 @@ useEffect(()=>{
                 <input type="text" ref={userAgeRef} required/></div>
                 <button type="submit" className='submitBtnForm' disabled={disabledbtn}>Submit</button>
             </form>
-            {userLogin.error && <p>{loginErr}</p>}
+            <Toaster />     
         </div>
+ 
     </div>
+    
   )
 }
 
