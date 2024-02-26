@@ -10,6 +10,7 @@ body{  background-color: #FFF7F1;}
 .addUserBtn{border: 1px solid #E78895;  background-color: #FFF7F1; color: #E78895;  border-radius: 20px;  padding: 1rem 3rem; cursor: pointer;transition: .3s ease;font-weight: 600;font-size: 20px;margin-bottom: 1.5rem;}
 .addUserBtn:hover{background-color: #E78895;color: #FFF7F1; transition: .3s ease;}
 .form{background: #E78895;border-radius: 20px;padding:3rem 4rem;color:#FFF7F1;width: 80%;margin: 4rem auto;}
+.inputForm{align-items: end; display: flex;flex-direction: column;}
 .form span{font-size: 28px; font-weight: 600;}
 form{display: flex; flex-direction: column;padding-bottom: 4rem; width: 400px; margin: auto; padding-bottom: 0;margin-top: 1.5rem; justify-content: center;  display: flex;   align-items: center;}
 form input{  background: transparent;  border: 1px solid #FFF7F1;  border-radius: 5px;  padding: 5px;  color:#FFF7F1;}
@@ -18,8 +19,9 @@ form input{  background: transparent;  border: 1px solid #FFF7F1;  border-radius
 .submitBtnForm:hover, .cardBtn:hover{    color:#FFF7F1;    background-color: #E78895;    border: 1px solid #FFF7F1;    transition: .3s ease; }
 .submitBtnForm:disabled{background-color: grey; color: black;}
 .submitBtnForm:disabled:hover{background-color: grey; color: black;}
-.inputContainer{margin: .5rem 0;}
+.inputContainer{margin: .5rem 0; position: relative;}
 .inputContainer label{margin-right: 0.35rem;}
+.passwordIcon{position: absolute; top: 0; bottom: 0; margin: auto; right: 0.4rem; background-color:#E78895; height: 80%;}
 .carddiv{    display: flex;  flex-direction: column; color:#FFF7F1;}
 .cardBtn{margin: 0 1rem;}
 .appNav{position: absolute;top: 0 ;right: 5rem;}
