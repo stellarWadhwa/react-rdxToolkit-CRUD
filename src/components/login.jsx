@@ -64,6 +64,13 @@ useEffect(()=>{
             setLoginErr(err.response.data)
         }
     }
+    const handleRegister=(e)=>{
+      e.preventDefault();
+      setTimeout(()=>{
+        navigate("/register");
+
+      })
+    }
     
     
   return (
@@ -72,13 +79,14 @@ useEffect(()=>{
             <span>Login</span>
             <form onSubmit={handleSubmit}>
                 <div className='inputContainer'>
-                <label>Name: </label>
+                <label>Email Id: </label>
                 <input type="email" ref={userNameRef} required/></div>
                 
                 <div className='inputContainer'><label>Password: </label>
                 <input type="text" ref={userAgeRef} required/></div>
                 <button type="submit" className='submitBtnForm' disabled={disabledbtn}>Submit</button>
             </form>
+            <div className='registerDiv'><p>New User? </p><button onClick={handleRegister}>Register</button></div>
             <Toaster />     
         </div>
  

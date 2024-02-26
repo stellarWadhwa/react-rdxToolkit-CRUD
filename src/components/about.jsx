@@ -12,8 +12,10 @@ if(userLogin.user==null) navigate('/login')
     },[])
   return (
     <>
+    <div className='wrapperSidebar'>
     <Sidebar />
-    <div>About</div></>
+    <div className='about'><h2>About</h2></div>
+    </div></>
 
   )
 }

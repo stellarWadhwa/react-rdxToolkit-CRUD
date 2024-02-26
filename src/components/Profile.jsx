@@ -12,12 +12,14 @@ const Profile = () => {
         },[])
   return (
     <>
+    <div className='wrapperSidebar'>
     <Sidebar />
     {userLogin.user && 
     <div className='profileComponent'>
       <img src={userLogin.user.img} />
       <span>Email ID: {userLogin.user.email}</span>
       </div>}
+      </div>
     </>
   )
 }

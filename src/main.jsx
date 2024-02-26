@@ -14,6 +14,10 @@ import Login from './components/login.jsx';
 import Profile from './components/Profile.jsx';
 import About from './components/about.jsx';
 import PageNotFound from './components/pageNotFound.jsx';
+import Register from './components/register.jsx';
+import AddUser from './components/addUser.jsx';
+import UserControls from './components/userControls.jsx';
+import AssignRole from './components/assignRole.jsx';
 // const userLogin=useSelector(selectUserLogin)
 
 const router = createBrowserRouter([  
@@ -26,12 +30,28 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
+    path: "/register",
+    element: <Register />,
+  },
+  {
     path: "/profile",
     element: <Profile />,
   },
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/admin/adduser",
+    element: <AddUser />,
+  },
+    {
+    path: "/admin/usercontols",
+    element: <UserControls />,
+  },
+  {
+    path:"/admin/assignroles",
+    element:<AssignRole />
   },
   {  path:"*",
   element: <PageNotFound />}
