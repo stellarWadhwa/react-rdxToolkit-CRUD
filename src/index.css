@@ -45,3 +45,18 @@ form input{  background: transparent;  border: 1px solid #FFF7F1;  border-radius
 .assignrolecard div{flex: 1;}
 .about{margin: auto;}
 h2{font-size: 22px;font-weight: 500; color:#696969}
+.antmenu{display: flex; }
+.menu-container {height: 100vh;max-height: 100vh; background-color: #E78895; color: #FFF7F1; font-weight: 600; font-family: 'Montserrat' !important;}
+.ant-menu-item-selected{background-color: #E78895 !important}
+.buttonMenu{margin-left: 0.5rem; margin-top: 0.5rem; border-color: #FFF7F1 !important; color: #FFF7F1 !important; background-color: #E78895 !important;}
+.buttonMenu:hover{border-color: #E78895 !important; color: #E78895 !important;  background-color: #FFF7F1 !important;}
+.antmenu ul li,.antmenu ul {background-color: #E78895;}
+.ant-menu-inline {background-color: #E78895 !important;}
+.ant-menu-item, .ant-menu-submenu-title {margin: 1rem 0 !important; color: #FFF7F1 !important;}
+.ant-menu-title-content{display: flex;}
+.menuusername:before{    content: '';width: 7px;height: 7px;background: pink;border-radius: 13px;margin-right: 1.5rem;}
+.menuusernamecollapsed::before{  content: '';width: 7px;height: 7px;background: pink;border-radius: 13px;position: absolute;left: 2.2rem; top: 1rem;display: block;}
+.menuusername,.menuusernamecollapsed{    background: #FFF7F1 !important;position: relative;top: -1rem;width: 100% !important;border-radius: 0 !important;color: #E78895 !important;
+}
+/* .ant-menu .ant-menu-sub .ant-menu-inline{background-color: #E78895 !important;} */
+/* #FF004D admincolor  #B7C9F2 subadmin  A5DD9B employee  #FFD23F intern*/

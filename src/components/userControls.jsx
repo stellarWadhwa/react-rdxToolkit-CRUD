@@ -3,6 +3,9 @@ import Sidebar from './Sidebar'
 import { useSelector } from 'react-redux'
 import { selectUserLogin } from '../features/userloginSlice'
 import axios from "axios"
+import toast, { Toaster } from 'react-hot-toast';
+
+import Menuu from './antDesignMenu'
 
 const UserControls = () => {
     const userlogin=useSelector(selectUserLogin);
@@ -37,7 +40,7 @@ catch(err){
 }
     }
 useEffect(()=>{
-if(userlogin.user.role!='administrator') setUserIsAdmin(false);
+if(userlogin && userlogin.user && userlogin.user.role!='administrator') setUserIsAdmin(false);
 fetchData()
 },[userlogin])
 
@@ -45,7 +48,8 @@ fetchData()
   <>
   {userIsAdmin ?
   <div className='wrapperSidebar'>
-  <Sidebar />
+  {/* <Sidebar /> */}
+  <Menuu />
   <div className='addedusercardwrapper'>
   {fetchedData.length !== 0 ? 
     (

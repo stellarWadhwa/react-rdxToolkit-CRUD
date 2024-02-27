@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useSelector } from 'react-redux';
 import { selectUserLogin } from '../features/userloginSlice';
 import toast, { Toaster } from 'react-hot-toast';
+import Menuu from './antDesignMenu'
 
 
 
@@ -69,7 +70,9 @@ const handlePasswordToggle=()=>{
   return (
   <>
   {userIsAdmin ?   <div className='wrapperSidebar'>
-  <Sidebar />
+  {/* <Sidebar /> */}
+  <Menuu />
+
   <div className='addUserDiv'>
     <h2>Add a New User:</h2>
     <button className='submitBtnForm' onClick={showAddForm}>Add</button>

@@ -3,6 +3,8 @@ import Sidebar from './Sidebar'
 import { useSelector } from 'react-redux'
 import { selectUserLogin } from '../features/userloginSlice'
 import { useNavigate } from 'react-router-dom'
+import Menuu from './antDesignMenu'
+
 
 const About = () => {
     const userLogin=useSelector(selectUserLogin);
@@ -13,7 +15,9 @@ if(userLogin.user==null) navigate('/login')
   return (
     <>
     <div className='wrapperSidebar'>
-    <Sidebar />
+    {/* <Sidebar /> */}
+    <Menuu />
+
     <div className='about'><h2>About</h2></div>
     </div></>
 

@@ -4,6 +4,7 @@ import axios from "axios"
 import toast, { Toaster } from 'react-hot-toast';
 import { useSelector } from 'react-redux';
 import { selectUserLogin } from '../features/userloginSlice';
+import Menuu from './antDesignMenu'
 
 const AssignRole = () => {
     const [selectedRole, setSelectedRole] = useState('');
@@ -29,11 +30,12 @@ const res=await axios.post("http://localhost:4000/api/admin/updateuserrole",{
 email:currEmail,
 role:selectedRole
 })
+toast("Logged In",{
+  icon:"✅"
+});
+console.log(res.data)
 setSubmitShow(false)
-toast(res.data,{
-    icon:"✅"
-  })
-console.log(res)}
+}
 catch(err){
     console.log(err)
 }
@@ -53,7 +55,8 @@ if(userlogin.user.role!='administrator') setUserIsAdmin(false);
     <>
      {userIsAdmin ?
     <div className='wrapperSidebar'>
-    <Sidebar />
+    {/* <Sidebar /> */}
+    <Menuu />
     <div className='assignrolecardcardwrapper'>
         <h2>Users created by you:</h2>
     {fetchedData.length !== 0 ? 
@@ -67,11 +70,11 @@ if(userlogin.user.role!='administrator') setUserIsAdmin(false);
 
   <option value="intern">Intern</option>
   <option value="employee">Employee</option>
-  <option value="sub-admin">Sub-admin</option>
-  <option value="admin">Admin</option>
+  <option value="subadmin">Sub-admin</option>
+  <option value="administrator">Admin</option>
   
    </select>
-{(submitShow && (currEmail==data.email)) && <button onClick={updateRole}>change</button>}
+{(submitShow && (currEmail==data.email)) && <button onClick={updateRole} style={{marginLeft:"0.5rem"}}>change</button>}
             </div>
           );
         })

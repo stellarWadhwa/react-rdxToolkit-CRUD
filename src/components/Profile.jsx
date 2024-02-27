@@ -3,6 +3,7 @@ import Sidebar from './Sidebar'
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectUserLogin } from '../features/userloginSlice';
+import Menuu from './antDesignMenu'
 
 const Profile = () => {
     const userLogin=useSelector(selectUserLogin);
@@ -13,7 +14,8 @@ const Profile = () => {
   return (
     <>
     <div className='wrapperSidebar'>
-    <Sidebar />
+    {/* <Sidebar /> */}
+    <Menuu />
     {userLogin.user && 
     <div className='profileComponent'>
       <img src={userLogin.user.img} />
