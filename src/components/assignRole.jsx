@@ -5,6 +5,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useSelector } from 'react-redux';
 import { selectUserLogin } from '../features/userloginSlice';
 import Menuu from './antDesignMenu'
+import { useNavigate } from 'react-router-dom';
 
 const AssignRole = () => {
     const [selectedRole, setSelectedRole] = useState('');
@@ -13,6 +14,10 @@ const AssignRole = () => {
   const[userIsAdmin,setUserIsAdmin]=useState(true);
     const [currEmail,setCurrEmail]=useState('');
     const [submitShow,setSubmitShow]=useState(false);
+    const navigate=useNavigate();
+    useEffect(() => {
+if(userlogin.user==null) navigate('/login')
+    },[])
     const fetchData=async()=>{
         try{
     const res=await axios.post("http://localhost:4000/api/admin/getcreateduser",{

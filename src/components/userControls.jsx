@@ -6,12 +6,16 @@ import axios from "axios"
 import toast, { Toaster } from 'react-hot-toast';
 
 import Menuu from './antDesignMenu'
+import { useNavigate } from 'react-router-dom'
 
 const UserControls = () => {
     const userlogin=useSelector(selectUserLogin);
 const [fetchedData,setFetchedData]=useState([])
 const[userIsAdmin,setUserIsAdmin]=useState(true);
-
+const navigate=useNavigate();
+    useEffect(() => {
+if(userlogin.user==null) navigate('/login')
+    },[])
 
     const fetchData=async(value)=>{
         console.log(value)

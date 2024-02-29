@@ -55,10 +55,12 @@ if(userLogin.user==null){
 }},[userLogin])
 console.log(userLogin?.user?.role)
 const menuusernamecollapsed={content: '',width: "7px",height: "7px",
-background: userLogin.user.role=="administrator"?'#FF004D':"#000000",
+// background: userLogin.user.role=="administrator"?'#FF004D':"#000000",
+background:'#FF004D',
 borderRadius: "13px",position: "absolute",left: "2.2rem", top: "1rem",display: "block"}
 const menuusername ={content: '',width: "7px",height: "7px",
-background: userLogin.user.role=="administrator"?'#FF004D':"#000000",
+// background: userLogin.user.role=="administrator"?'#FF004D':"#000000",
+background:'#FF004D',
 borderRadius: "13px",marginRight: "1.5rem"} 
 return (
     <div className='antmenu' style={{ width: 256 }}>
@@ -73,7 +75,7 @@ return (
       >
         {/* <Menu.Item className="menuusername" > */}
         <Menu.Item className={collapsed ? {menuusernamecollapsed}:{menuusername}} >
-          {!collapsed && <span>Welcome! {userLogin.user.name}</span>}
+          {!collapsed && userLogin && userLogin.user &&<span>Welcome! {userLogin.user.name}</span>}
         </Menu.Item>
         <Menu.Item key="1" icon={<DashboardOutlined style={{fontSize:"22px"}}/>} >
           <NavLink to="/" activeClassName="active">Dashboard</NavLink>

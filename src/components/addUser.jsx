@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { selectUserLogin } from '../features/userloginSlice';
 import toast, { Toaster } from 'react-hot-toast';
 import Menuu from './antDesignMenu'
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -19,7 +20,12 @@ const AddUser = () => {
   const userPasswordref=useRef();
 const userEmailref=useRef();
 const userLogin=useSelector(selectUserLogin);
-console.log(userLogin.user.role)
+
+
+const navigate=useNavigate();
+    useEffect(() => {
+if(userLogin.user==null) navigate('/login')
+    },[])
 useEffect(()=>{
 if(userLogin.user.role!='administrator') setUserIsAdmin(false);
 // if(userLogin.user.role!='administrator') setUserIsAdmin(false)
