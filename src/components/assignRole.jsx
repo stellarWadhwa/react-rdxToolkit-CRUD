@@ -46,12 +46,10 @@ catch(err){
 }
     }
 const handleRoleChange = (e,data) => {
-    
-    setCurrEmail(data)
-    setSubmitShow(true)
+    setCurrEmail(data);
+    setSubmitShow(true);
     setSelectedRole(e.target.value);
   };
-  console.log(selectedRole)
     useEffect(()=>{
 if(userlogin.user.role!='administrator') setUserIsAdmin(false);
         fetchData()
@@ -67,19 +65,26 @@ if(userlogin.user.role!='administrator') setUserIsAdmin(false);
     {fetchedData.length !== 0 ? 
       (
         fetchedData.map((data) => {
+          
           return (
             
             <div key={data._id} className='assignrolecard'>
+            <div className='assignrolecarddiv'>
+            <span>User: {data.name}</span>
+            <span>Current Role: {data.role}</span>
            <div><span>Email: </span>{data.email}</div>
-           <select name="roles" id="userroles" value={{selectedRole} || null} onChange={(e)=>handleRoleChange(e,data.email)}>
+           <select name="roles" id="userroles"  onChange={(e)=>handleRoleChange(e,data.email)} 
+                     >
 
-  <option value="intern">Intern</option>
+  <option value="intern" >Intern</option>
   <option value="employee">Employee</option>
   <option value="subadmin">Sub-admin</option>
   <option value="administrator">Admin</option>
   
    </select>
 {(submitShow && (currEmail==data.email)) && <button onClick={updateRole} style={{marginLeft:"0.5rem"}}>change</button>}
+            </div>
+            
             </div>
           );
         })

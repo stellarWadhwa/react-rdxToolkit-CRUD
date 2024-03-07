@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
+import { jwtDecode } from "jwt-decode";
 
 import {
   AppstoreOutlined,
@@ -22,6 +23,10 @@ import { logout, selectUserLogin } from '../features/userloginSlice';
 const { SubMenu } = Menu;
 
 const App = () => {
+  const userLogin=useSelector(selectUserLogin);
+  if (userLogin != null && userLogin.user != null && userLogin.user.token != null) {
+    var decodedUser = jwtDecode(userLogin.user.token);
+  }
   const [collapsed, setCollapsed] = useState(false);
   const [selectedKeys, setSelectedKeys] = useState([]);
 
@@ -37,7 +42,7 @@ const App = () => {
   const dispatch=useDispatch();
   const navigate=useNavigate();
 
-  const userLogin=useSelector(selectUserLogin);
+
   function  handleLogout(){
     dispatch(logout());
     setTimeout(()=>{
@@ -45,15 +50,15 @@ const App = () => {
         icon:"✅"
       });
       navigate("/login");
-    },1000)
+    },10000)
       }
   useEffect(()=>{
-if(userLogin.user==null){
+if(decodedUser.user==null){
   toast("Logged Out",{
     icon:"✅"
   })
 }},[userLogin])
-console.log(userLogin?.user?.role)
+console.log(decodedUser?.user?.role)
 const menuusernamecollapsed={content: '',width: "7px",height: "7px",
 // background: userLogin.user.role=="administrator"?'#FF004D':"#000000",
 background:'#FF004D',
@@ -63,7 +68,7 @@ const menuusername ={content: '',width: "7px",height: "7px",
 background:'#FF004D',
 borderRadius: "13px",marginRight: "1.5rem"} 
 return (
-    <div className='antmenu' style={{ width: 256 }}>
+    <div className='antmenu'>
       <Menu
         className='menu-container'
         selectedKeys={selectedKeys}
@@ -75,7 +80,7 @@ return (
       >
         {/* <Menu.Item className="menuusername" > */}
         <Menu.Item className={collapsed ? {menuusernamecollapsed}:{menuusername}} >
-          {!collapsed && userLogin && userLogin.user &&<span>Welcome! {userLogin.user.name}</span>}
+          {!collapsed && decodedUser && decodedUser.user &&<span>Welcome! {decodedUser.user.name}</span>}
         </Menu.Item>
         <Menu.Item key="1" icon={<DashboardOutlined style={{fontSize:"22px"}}/>} >
           <NavLink to="/" activeClassName="active">Dashboard</NavLink>
@@ -86,7 +91,7 @@ return (
         <Menu.Item key="3" icon={<ProfileOutlined style={{fontSize:"22px"}}/>}>
           <NavLink to="/profile" activeClassName="active">Profile</NavLink>
         </Menu.Item>
-        {userLogin && userLogin.user && userLogin.user.role==="administrator" &&
+        {decodedUser && decodedUser.user && decodedUser.user.role==="administrator" &&
 
         <SubMenu key="sub1" icon={<ControlOutlined style={{fontSize:"22px"}}/>} title="Admin Controls">
           <Menu.Item key="5" icon={<UserAddOutlined style={{fontSize:"22px"}}/>}>

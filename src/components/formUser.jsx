@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../features/usersSlice';
 
-const FormUser = ({onFormSubmit}) => {
+const FormUser = ({onFormSubmit,handleClose}) => {
     const userNameRef = useRef();
     const userAgeRef = useRef();
     const dispatch=useDispatch();
@@ -22,6 +22,7 @@ const FormUser = ({onFormSubmit}) => {
 
     return (
         <div className='form'>
+        <button onClick={handleClose} className='closeformbtn'>❌</button>
             <span>Add User</span>
             <form onSubmit={handleSubmit}>
                 <div className='inputContainer'>

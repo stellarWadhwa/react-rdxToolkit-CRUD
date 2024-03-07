@@ -6,7 +6,6 @@ import FormUser from './formUser';
 import EditFormUser from './editFormUser';
 import {logout, selectUserLogin} from "../features/userloginSlice"
 import { useNavigate } from "react-router-dom"; 
-import Menuu from './antDesignMenu'
 
 function CrudOperations() {
   const navigate = useNavigate();
@@ -44,6 +43,9 @@ function handleUpdate(user){
 function editSucces(){
   setShowEditForm(false);
 }
+function closeForm(){
+  setShowAddForm(false);
+}
 function addSucces(){
   setShowAddForm(false);
 }
@@ -52,9 +54,11 @@ const users=useSelector(selectUsers);
 
 return (
     <>
+
+
     <div className='mainApp'>
-<button className='addUserBtn' onClick={handleAddUserButton}>Add Users</button>
-        {showAddForm && <FormUser onFormSubmit={addSucces}/>}
+<button className='addUserBtn' onClick={handleAddUserButton} >Add Data</button>
+        {showAddForm && <FormUser onFormSubmit={addSucces}  handleClose={closeForm}/>}
               {showedEditForm && <EditFormUser userData={editUserData} onFormSubmit={editSucces}/> }
 
     <div className='cardP'>
@@ -74,12 +78,13 @@ return (
   </div>
   
   </>
-)):<h2>😥😥There are no users right now, please add!</h2>}
+)):<h2>😥😥There is no data right now, please add!</h2>}
        
         
         </div>
         </div>
         </div>
+
     </>
   )
 }
