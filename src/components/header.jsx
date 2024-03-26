@@ -5,12 +5,16 @@ import { useSelector } from 'react-redux';
 
 const Headerr = () => {
     const userLogin=useSelector(selectUserLogin);
-    const decodedUser = jwtDecode(userLogin?.user?.token);
+    const decodedUser = userLogin.user !== null ? jwtDecode(userLogin.user.token) : null;
 
   return (
     <div className='header'>
         <span>Admin Panel</span>
-        <span>Hi {decodedUser.user.name}</span>
+        {userLogin.user!=null ?(
+           <span> Hi {decodedUser.user.name}</span>
+        ):(
+          <span>Hi</span>
+        )}
     </div>
   )
 }

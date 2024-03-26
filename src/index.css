@@ -3,26 +3,26 @@
 @import 'tailwindcss/components';
 
 @import 'tailwindcss/utilities';
-body{  background-color: #FFF7F1;}
+body{  background-color: #F5F5F5;}
 *{font-family: 'Montserrat';}
-.card{  display: flex;  justify-content: center;  padding: 0rem 5rem;  display: flex;  flex-wrap: wrap; background-color: #FFF7F1; border: none;}
+.card{  display: flex;  justify-content: center;  padding: 0rem 5rem;  display: flex;  flex-wrap: wrap; background-color: #F5F5F5; border: none;}
 .card div{  background-color: #0B60B0;  padding: 1rem 1rem;  margin: 1rem 2rem; border-radius: 20px;}
-.addUserBtn{border: 1px solid #0B60B0;  background-color: #FFF7F1; color: #0B60B0;  border-radius: 20px;  padding: 1rem 3rem; cursor: pointer;transition: .3s ease;font-weight: 600;font-size: 20px;margin-bottom: 1.5rem;}
-.addUserBtn:hover{background-color: #0B60B0;color: #FFF7F1; transition: .3s ease;}
-.form{background: #FFF7F1;border-radius: 10px;padding:1rem 0rem;color:#070F2B;width: fit-content;margin: 4rem auto;position: relative; border: 1px solid black;}
+.addUserBtn{border: 1px solid #0B60B0;  background-color: #F5F5F5; color: #0B60B0;  border-radius: 20px;  padding: 1rem 3rem; cursor: pointer;transition: .3s ease;font-weight: 600;font-size: 20px;margin-bottom: 1.5rem;}
+.addUserBtn:hover{background-color: #0B60B0;color: #F5F5F5; transition: .3s ease;}
+.form{background: #F5F5F5;border-radius: 10px;padding:1rem 0rem;color:#070F2B;width: fit-content;margin: 4rem auto;position: relative; border: 1px solid black;}
 .inputForm{align-items: end; display: flex;flex-direction: column;}
 .form span{font-size: 28px; font-weight: 600;}
 form{display: flex; flex-direction: column;padding-bottom: 4rem; width: 400px; margin: auto; padding-bottom: 0;margin-top: 1.5rem; justify-content: center;  display: flex;   align-items: center;}
-form input{  background: transparent;  border: 1px solid #FFF7F1;  border-radius: 5px;  padding: 5px;  color:#070F2B; border: 1px solid #070F2B;}
+form input{  background: transparent;  border: 1px solid #F5F5F5;  border-radius: 5px;  padding: 5px;  color:#070F2B; border: 1px solid #070F2B;}
 .mainApp{min-height: 80vh;  display: flex;  flex-direction: column;  align-items: center;  justify-content: center;margin: auto;}
-.submitBtnForm, .cardBtn{    margin-top: 1.5rem;    background: #0B60B0;    color: #FFF7F1;    padding: 1rem 2rem;    border-radius: 10px;    width: fit-content;    cursor: pointer;     transition: .3s ease;    font-weight: 600;  }
-.submitBtnForm:hover, .cardBtn:hover{    color:#FFF7F1;    background-color: #3652AD;      transition: .3s ease; }
+.submitBtnForm, .cardBtn{    margin-top: 1.5rem;    background: #0B60B0;    color: #F5F5F5;    padding: 1rem 2rem;    border-radius: 10px;    width: fit-content;    cursor: pointer;     transition: .3s ease;    font-weight: 600;  }
+.submitBtnForm:hover, .cardBtn:hover{    color:#F5F5F5;    background-color: #3652AD;      transition: .3s ease; }
 .submitBtnForm:disabled{background-color: grey; color: black;}
 .submitBtnForm:disabled:hover{background-color: grey; color: black;}
 .inputContainer{margin: .5rem 0; position: relative;}
 .inputContainer label{margin-right: 0.35rem;}
 .passwordIcon{position: absolute; top: 0; bottom: 0; margin: auto; right: 0.4rem; height: 80%;}
-.carddiv{    display: flex;  flex-direction: column; color:#FFF7F1;}
+.carddiv{    display: flex;  flex-direction: column; color:#F5F5F5;}
 .cardBtn{margin: 0 1rem;}
 .appNav{position: absolute;top: 0 ;right: 5rem;}
 .appNav button{margin-left:1rem}
@@ -33,35 +33,46 @@ form input{  background: transparent;  border: 1px solid #FFF7F1;  border-radius
 .registerDiv p,.loginDiv p{margin-right: 0.5rem;}
 .registerDiv button:hover, .loginDiv button:hover{text-decoration: underline;}
 .item-content{display: flex;}
-.multilevelSidebar{width: 20%;top: 0;left: 0; background-color: #E78895 !important; color: #FFF7F1 !important;}
+.multilevelSidebar{width: 20%;top: 0;left: 0; background-color: #E78895 !important; color: #F5F5F5 !important;}
 .sidebarli{display: flex;justify-content: flex-start;align-items: center;gap: 1rem;}
 .addUserDiv{ display: flex; flex-direction: column; align-items: center;width: 100%; margin: auto;}
-.addedusercard{ background-color: #E78895; color: #FFF7F1; border: 1px solid #FFF7F1;     width: 300px;border-radius: 20px;padding: 1rem 2rem; max-width: 300px;     display: flex;flex-direction: column;align-items: baseline;} 
+.addedusercard{ background-color: #E78895; color: #F5F5F5; border: 1px solid #F5F5F5;     width: 300px;border-radius: 20px;padding: 1rem 2rem; max-width: 300px;     display: flex;flex-direction: column;align-items: baseline;} 
 .wrapperSidebar{display: flex;}
 .addedusercardwrapper{display: flex;flex-wrap: wrap;column-gap:1rem;row-gap:1rem; align-items: center;justify-content: center; margin: auto;}
 .assignrolecardcardwrapper select{color:#E78895; border-radius: 10px; padding: 0rem 0.5rem; cursor: pointer;}
-.assignrolecard {background-color: #E78895; color: #FFF7F1; border: 1px solid #FFF7F1; margin: 2rem 0;    width: 350px;border-radius: 20px;padding: 1rem 2rem; max-width: 600x;display: flex; flex-direction: column;}
+.assignrolecard {background-color: #E78895; color: #F5F5F5; border: 1px solid #F5F5F5; margin: 2rem 0;    width: 350px;border-radius: 20px;padding: 1rem 2rem; max-width: 600x;}
 .assignrolecardcardwrapper{margin: auto; flex-direction: column; display: flex;}
-.assignrolecard div{flex: 1;}
-.assignrolecarddiv{display: flex;flex-direction: column;align-items: baseline;margin: auto;}
-.assignrolecarddiv span, select{padding-top:0.25rem}
+/* .assignrolecarddiv{display: flex;flex-direction: column;align-items: baseline;margin: auto;} */
+.tableTop span, select{padding-top:0.25rem}
+.assignRoleWrapper{width: 100%;}
+.valTableData{max-width: 180px; width: 100%; word-break: break-all;display: flex; flex-direction: column;align-items: center;align-items: baseline;}
+.assignRoleTable span{max-width: 180px; width: 100%; word-break: break-all;}
+.roleTableContent{max-width: 80%; background: white; margin-top: 2rem; padding: 1rem 0; border-radius: 10px;box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;}
+.roleTableContent >  div{border-bottom: 1px solid #ddd;}
+.roleTableContent >  div:last-child{border: none;}
+.roleTableContent .inputForm input:focus{outline: none;}
+.roleTableContent .inputForm input{border: none;}
+select{cursor: pointer; background:transparent;}
+select:focus {outline:none}
+
 .about{margin: auto;}
 h2{font-size: 22px;font-weight: 500; color:#696969}
 .antmenu{display: flex; }
-.menu-container {height: 100vh;max-height: 100vh; background-color: #0B60B0; color: #FFF7F1; font-weight: 600; font-family: 'Montserrat' !important;}
+.ant-btn{position: sticky; top: 1rem;}
+.menu-container {position: sticky;top: 0; height: 100vh;max-height: 100vh; background-color: #0B60B0; color: #F5F5F5; font-weight: 600; font-family: 'Montserrat' !important;}
 .ant-menu-item-selected{background-color: #0B60B0 !important}
-.buttonMenu{margin-left: 0.5rem; margin-top: 0.5rem; border-color: #FFF7F1 !important; color: #FFF7F1 !important; background-color: #0B60B0 !important;}
-.buttonMenu:hover{ color: #0B60B0 !important;  background-color: #FFF7F1 !important; border: 1px solid #0B60B0;}
+.buttonMenu{margin-left: 0.5rem; margin-top: 0.5rem; border-color: #F5F5F5 !important; color: #F5F5F5 !important; background-color: #0B60B0 !important;}
+.buttonMenu:hover{ color: #0B60B0 !important;  background-color: #F5F5F5 !important; border: 1px solid #0B60B0;}
 .antmenu ul li,.antmenu ul {background-color: #0B60B0;}
 .ant-menu-inline {background-color: #0B60B0 !important;}
-.ant-menu-item, .ant-menu-submenu-title {margin: 1rem 0 !important; color: #FFF7F1 !important;}
+.ant-menu-item, .ant-menu-submenu-title {margin: 1rem 0 !important; color: #F5F5F5 !important;}
 .ant-menu-title-content{display: flex;}
 .menuusername:before{    content: '';width: 7px;height: 7px;background: pink;border-radius: 13px;margin-right: 1.5rem;}
 .menuusernamecollapsed::before{  content: '';width: 7px;height: 7px;background: pink;border-radius: 13px;position: absolute;left: 2.2rem; top: 1rem;display: block;}
-.menuusername,.menuusernamecollapsed{    background: #0B60B0 !important;position: relative;top: -1rem;width: 100% !important;border-radius: 0 !important;color: #FFF7F1 !important;
+.menuusername,.menuusernamecollapsed{    background: #0B60B0 !important;position: relative;top: -1rem;width: 100% !important;border-radius: 0 !important;color: #F5F5F5 !important;
 }
-.header{background-color: #0B60B0; display: flex;justify-content: space-between; color: #FFF7F1;padding: 1rem 2rem;margin-left: 0.5rem;}
-::selection{background: #0B60B0; color:#FFF7F1}
-.closeformbtn{position: absolute;top: 1%;right: 1%;background-color: #FFF7F1;padding: 0.25rem; border-radius: 0px 0px 0px 10px;}
+.header{background-color: #0B60B0; display: flex;justify-content: space-between; color: #F5F5F5;padding: 1rem 2rem;margin-left: 0.5rem;}
+::selection{background: #0B60B0; color:#F5F5F5}
+.closeformbtn{position: absolute;top: 1%;right: 1%;background-color: #F5F5F5;padding: 0.25rem; border-radius: 0px 0px 0px 10px;}
 /* .ant-menu .ant-menu-sub .ant-menu-inline{background-color: #E78895 !important;} */
 /* #FF004D admincolor  #B7C9F2 subadmin  A5DD9B employee  #FFD23F intern*/  

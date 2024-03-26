@@ -50,15 +50,15 @@ const App = () => {
         icon:"✅"
       });
       navigate("/login");
-    },10000)
+    },1000)
       }
   useEffect(()=>{
-if(decodedUser.user==null){
+if(decodedUser?.user==null){
   toast("Logged Out",{
     icon:"✅"
   })
 }},[userLogin])
-console.log(decodedUser?.user?.role)
+// console.log(decodedUser?.user?.role)
 const menuusernamecollapsed={content: '',width: "7px",height: "7px",
 // background: userLogin.user.role=="administrator"?'#FF004D':"#000000",
 background:'#FF004D',

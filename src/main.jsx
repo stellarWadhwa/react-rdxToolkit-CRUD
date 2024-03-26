@@ -18,7 +18,6 @@ import Register from './components/register.jsx';
 import AddUser from './components/addUser.jsx';
 import UserControls from './components/userControls.jsx';
 import AssignRole from './components/assignRole.jsx';
-// const userLogin=useSelector(selectUserLogin)
 
 const router = createBrowserRouter([  
   {

@@ -8,7 +8,8 @@ export default {
     extend: {
       colors:{
         'odd-color':"#E78895",
-        'odd-white-color': '#FFF7F1'
+        'odd-white-color': '#F5F5F5',
+        'blueColor':'#0B60B0'
       }
     },
   },
