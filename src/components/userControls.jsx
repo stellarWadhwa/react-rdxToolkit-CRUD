@@ -68,7 +68,7 @@ fetchData(decodeduser.user.email)
   <Menuu />
  
   <div className="assignRoleWrapper">
-    <div className='assignRoleTable mt-[5rem] ml-[1rem]'>
+    <div className='assignRoleTable my-[5rem] ml-[1rem]'>
       <div className='tableTop flex'>
         <span className='flex ml-[2rem] text-gray-500 font-semibold'>User</span>
         <span className='flex ml-[2rem] text-gray-500 font-semibold'>User Mail</span>

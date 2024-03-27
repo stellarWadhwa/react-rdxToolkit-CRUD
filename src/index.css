@@ -28,7 +28,6 @@ form input{  background: transparent;  border: 1px solid #F5F5F5;  border-radius
 .appNav button{margin-left:1rem}
 .userNameDashboard{word-break: break-all;}
 /* .activeClicked .active {font-weight: 900;} */
-.profileComponent{display: flex; flex-direction: column; align-items: center;justify-content: center;margin: auto;}
 .registerDiv, .loginDiv{    display: flex;justify-content: center;margin-top: 1rem;}
 .registerDiv p,.loginDiv p{margin-right: 0.5rem;}
 .registerDiv button:hover, .loginDiv button:hover{text-decoration: underline;}
@@ -74,5 +73,8 @@ h2{font-size: 22px;font-weight: 500; color:#696969}
 .header{background-color: #0B60B0; display: flex;justify-content: space-between; color: #F5F5F5;padding: 1rem 2rem;margin-left: 0.5rem;}
 ::selection{background: #0B60B0; color:#F5F5F5}
 .closeformbtn{position: absolute;top: 1%;right: 1%;background-color: #F5F5F5;padding: 0.25rem; border-radius: 0px 0px 0px 10px;}
+
+.profileComponent{box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px; }
+
 /* .ant-menu .ant-menu-sub .ant-menu-inline{background-color: #E78895 !important;} */
 /* #FF004D admincolor  #B7C9F2 subadmin  A5DD9B employee  #FFD23F intern*/  
